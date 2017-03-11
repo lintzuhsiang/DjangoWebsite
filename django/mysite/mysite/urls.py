@@ -14,9 +14,11 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from trips.views import hello_world,home
+from trips.views import hello_world,home,exercise,exercise2
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'hello/$',hello_world),
     url(r'^$',home),
+    url(r'^post/(?P<pk>\d+)/$',exercise,name='exercise'),
+    url(r'^exercise2/$',exercise2),
 ]
