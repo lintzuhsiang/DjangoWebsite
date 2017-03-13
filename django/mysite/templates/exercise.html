@@ -17,16 +17,16 @@
     </div>
     <div class="container post post-detail">
         <div class="post-heading">
-            <h1 class="title">{{ post.title }}</h1>
-            <div class="date">{{ post.created_at|date:'Y / m / d' }}</div>
+            <h1 class="title">{{ exercise.title }}</h1>
+            <div class="date">{{ exercise.created_at|date:'Y / m / d' }}</div>
         </div>
         <div class="location">
             <i class="fa fa-map-marker"></i>
-            <span id="location-content">{{ post.location }}</span>
+            <span id="location-content">{{ exercise.location }}</span>
         </div>
         <div id="map-canvas" class="map"></div>
         <div class="post-content">
-            {{ post.content }}
+            {{ exercise.content }}
         </div>
         <hr class="fancy-line">
         <img class="photo" src="{{ post.photo }}" alt="Cover photo for {{ post.title }}">
